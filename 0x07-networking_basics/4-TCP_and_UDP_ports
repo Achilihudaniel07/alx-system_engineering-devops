@@ -1,1 +1,3 @@
- netwroking_bacics 
+#!/usr/bin/env bash
+# Script that displays listening ports
+netstat -lp
