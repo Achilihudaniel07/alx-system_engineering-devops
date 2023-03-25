@@ -1,1 +1,4 @@
-0x0A-configuration_management
+# Executes a command
+exec { 'pkill killmenow':
+  path => '/usr/bin:/usr/sbin:/bin'
+}
