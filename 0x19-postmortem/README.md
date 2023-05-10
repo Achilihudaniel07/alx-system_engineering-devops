@@ -3,12 +3,12 @@ On  2nd May, 2023, 5thwork site became very slow and unresponsive few hours ago 
 
 
 <b>TIMELINE</b> <br/>
-1:00 AM - A server issue is detected, causing the application to become unavailable to users.
-1:15 AM - The issue is escalated to the development team for investigation.
-1:30 AM - The development team determines that the issue is related to a hardware failure on one of the servers.
-1:45 AM - The team attempts to restore service by moving the application to another server, but encounters difficulties due to the complexity of the application.
-2:30 AM - The team successfully migrates the application to a new server and service is restored to users.
-3:00 AM - The team conducts a postmortem to analyze the incident and identify steps to prevent future occurrences.
+1:00 AM - A server issue is detected, causing the application to become unavailable to users.<br/>
+1:15 AM - The issue is escalated to the development team for investigation.<br/>
+1:30 AM - The development team determines that the issue is related to a hardware failure on one of the servers.<br/>
+1:45 AM - The team attempts to restore service by moving the application to another server, but encounters difficulties due to the complexity of the application.<br/>
+2:30 AM - The team successfully migrates the application to a new server and service is restored to users.<br/>
+3:00 AM - The team conducts a postmortem to analyze the incident and identify steps to prevent future occurrences.<br/>
 
 
 <b>ROOT CAUSE</b> <br/>
