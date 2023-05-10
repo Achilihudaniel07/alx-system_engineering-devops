@@ -19,6 +19,5 @@ IMPACT
 The impact of the outage was significant, with many users unable to access critical functionality of the application during the outage. This resulted in frustration and inconvenience for users, as well as potential financial losses for the company. Hence, the assessment has been extended by 1 day to give everyone the ample opportunity to complete their assessment
 
 
-
 MITIGATION
 To mitigate the impact of the outage, the development team worked quickly to migrate the application to a new server. However, the migration process was complicated by the complexity of the application, which made it difficult to move to a new server without encountering issues.
