@@ -1,4 +1,4 @@
-ISSUE SUMMARY
+<b>ISSUE SUMMARY</b> <br/>
 On  2nd May, 2023, 5thwork site became very slow and unresponsive few hours ago and this impacted on the ability of some students to take the assessment. The backend team seem to have fixed the issue, and in other to be very sure, they have triggered an upgrade of the course infrastructure. The outage was caused by a server issue that resulted in the application being unavailable to users. The impact of the outage was significant, with many users unable to access critical functionality of the application during the outage.
 
 
