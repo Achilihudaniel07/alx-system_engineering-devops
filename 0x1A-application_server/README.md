@@ -1,31 +1,46 @@
-Application server
-This was the application deployment project for our AirBnB clone. In this project, I configured Nginx on the web servers provided me by Holberton School to serve a WSGI Flask app running through Gunicorn. Additionally, I set up an Upstart script to keep the application running on server reboots.
+# Application_server
 
-Tasks ���
-0. Set up development with Python
+![](https://cdn.educba.com/academy/wp-content/uploads/2019/04/What-is-Application-Server-1.1.png)
 
-In this task, I configured the file web_flask/0-hello_route.py from my AirBnB_clone_v2 to serve content on the route /airbnb-onepage/, running on port 5000.
-1. Set up production with Gunicorn
+Your web infrastructure is already serving web pages via Nginx that you installed in [your first web stack project](https://github.com/sammykingx/alx-system_engineering-devops/tree/master/0x0C-web_server). While a web server can also serve dynamic content, this task is usually given to an application server. In this project you will add this piece to your infrastructure, plug it to your __Nginx__ and make is serve your __Airbnb clone project.__
 
-This task involved setting up a production environment, installing and configuring Gunicorn to serve the same file from task 0.
-2. Serve a page with Nginx
+## Project Requirements
 
-2-app_server-nginx_config: Nginx configuration file proxying requests on the route /airbnb-onepage/ to the Gunicorn app running on port 5000.
-3. Add a route with query parameters
+- A README.md file, at the root of the folder of the project, is mandatory
+- Everything Python-related must be done using `python3`
+- All config files must have comments
+- All your files will be interpreted on `Ubuntu 16.04 LTS`
+- All your files should end with a new line
+- All your Bash script files must be executable
+- Your Bash script must pass `Shellcheck` (`version 0.3.7-5~ubuntu16.04.1` via `apt-get`) without any error
+- The first line of all your Bash scripts should be exactly `#!/usr/bin/env bash`
+- The second line of all your Bash scripts should be a comment explaining what is the script doing.
 
-3-app_server-nginx_config: Nginx configuration file proxying requests on the route /airbnb-dynamic/number_odd_or_even/<int: num> to the Gunicorn app running on port 5000.
-4. Let's do this for your API
+### Project task
+- 0. Set up development with Python
+	Let’s serve what you built for AirBnB clone v2 - Web framework on web-01. This task is an exercise in setting up your development environment, which is used for testing and debugging your code before deploying it to production.
 
-In this task, I configured the API from my AirBnB_clone_v3 to run on Gunicorn.
-4-app_server-nginx_config: Nginx configuration file that proxies requests on the AirBnB API to the corresponding Gunicorn app.
-5. Serve your AirBnB clone
+	__Requirements:__
 
-In this task, I configured the complete AirBnB app from AirBnB_clone_v4 to run on Gunicorn and be served through Nginx.
-5-app_server-nginx_config: Nginx configuration file configured to serve the static assets from web_dynamic/static/ on the Gunicorn AirBnB app.
-6. Deploy it
+	- Make sure that task #3 of your SSH project is completed for web-01. The checker will connect to your servers.
+	- Git clone your AirBnB_clone_v2 on your web-01 server.
+	- Configure the file web_flask/0-hello_route.py to serve its content from the route /airbnb-onepage/ on port 5000.
+	- Your Flask application object must be named app (This will allow us to run and check your code).
 
-gunicorn.conf: Configuration file for an Upstart script that starts a Gunicorn process bounded to port 5003 that serves the content from task 5.
-The Gunicorn process spawns three worker processes and logs errors to /tmp/airbnb-error.log, access to /tmp/airbnb-access.log.
-7. No service interruption
+#### Solving task 0
+- git clone Airbnb_clone_v2
+- edit the file 0-hello_route.py by replacing "/" with "airbnb_onepage"
 
-4-reload_gunicorn_no_downtime: Bash script that gracefully reloads Gunicorn.
+```bash
+(venv) ubuntu@64820-web-01:~/AirBnB_clone_v2$ python3 -m web_flask.0-hello_route
+ * Serving Flask app '0-hello_route'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.247.26.30:5000
+Press CTRL+C to quit
+127.0.0.1 - - [10/Feb/2023 21:00:05] "GET /airbnb-onepage HTTP/1.1" 200 -
+
+```
+__After Fixing__
